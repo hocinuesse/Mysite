@@ -1,0 +1,133 @@
+.about-section {
+  padding: var(--section-padding);
+  background-color: var(--dark-bg);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--gray-text);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+.about-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Code Window Styling - تصميم نافذة الكود */
+.code-window {
+  width: 100%;
+  max-width: 450px;
+  background: var(--dark-card);
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  direction: ltr; /* Code is always LTR */
+  text-align: left;
+}
+
+.window-header {
+  background: #0f172a;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.file-name {
+  margin-left: 15px;
+  color: var(--gray-text);
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.window-content {
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.code-line {
+  color: #abb2bf;
+}
+
+.code-line.indent {
+  padding-left: 20px;
+}
+
+/* Syntax Highlighting Colors */
+.keyword { color: #c678dd; } /* Purple */
+.variable { color: #e06c75; } /* Red */
+.property { color: #d19a66; } /* Orange */
+.string { color: #98c379; } /* Green */
+.boolean { color: #56b6c2; } /* Cyan */
+.bracket { color: #e5c07b; } /* Yellow */
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-stats {
+    justify-content: center;
+  }
+  
+  .code-window {
+    max-width: 100%;
+  }
+}
